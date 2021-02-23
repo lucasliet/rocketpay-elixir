@@ -1,7 +1,7 @@
 defmodule Rocketpay.Numbers do
   def sum_from_file(filename) do
-    file = File.read("#{filename}.csv")
-    handle_file(file)
+    File.read("#{filename}.csv")
+    |>handle_file()
   end
 
   defp handle_file({:ok, file}), do: file
